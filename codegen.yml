@@ -1,0 +1,16 @@
+overwrite: true
+schema: './schema.graphql'
+generates:
+  ./src/typescript/schema_type.ts:
+    config:
+      skipTypename: true
+      namingConvention: lower-case#lowerCase
+      typesPrefix: I
+      enumPrefix: false
+      declarationKind: 'type'
+      scalars:
+        Long: number
+        String: string
+        Int: number
+    plugins:
+      - typescript
